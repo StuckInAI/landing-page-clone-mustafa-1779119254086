@@ -1,0 +1,132 @@
+.section {
+  padding: 80px 0;
+  background: var(--color-gray-100);
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.textSide {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  font-size: clamp(28px, 3.5vw, 48px);
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.15;
+  letter-spacing: -1px;
+}
+
+.description {
+  font-size: 17px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  max-width: 480px;
+}
+
+.storeBtns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.storeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.storeBtn:hover {
+  background: #1a3060;
+  transform: translateY(-1px);
+}
+
+.phoneSide {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phoneWrapper {
+  position: relative;
+  width: 200px;
+  height: 360px;
+  background: var(--color-navy);
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+}
+
+.phoneIcon {
+  display: none;
+}
+
+.phoneScreen {
+  flex: 1;
+  background: #f0f0f0;
+  margin: 16px 12px 12px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.appUI {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  flex: 1;
+}
+
+.appBar {
+  height: 24px;
+  background: var(--color-white);
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.appRow {
+  display: flex;
+  gap: 8px;
+  flex: 1;
+}
+
+.appCard {
+  flex: 1;
+  border-radius: 10px;
+  min-height: 60px;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    flex-direction: column;
+    padding: 0 24px;
+    gap: 40px;
+  }
+
+  .phoneSide {
+    order: -1;
+  }
+}
